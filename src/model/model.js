@@ -15,7 +15,15 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String
-    }
+    },
+    otp: {
+        type: String,
+        default: 0,
+      },
+      otp2: {
+        type: String,
+        default: 0,
+      },
 });
 userSchema.statics.findByToken = async function (token) {
     try {
